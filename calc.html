@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head\>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <input id="num1">
+
+    <select id="operation">
+
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+
+    </select>
+
+    <input id="num2">
+
+    <button onclick="run()">Calculate</button>
+
+    <p id="ans"></p>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.0/dist/sweetalert2.all.min.js" integrity="sha256-PokS6eWvc67qkBbhxlpg/W4UHnseEHRwArGs9+0zbXI=" crossorigin="anonymous"></script>
+
+<script>
+
+    function run() {
+
+        let opSelector = document.getElementById("operation")
+
+        let op = opSelector.options[opSelector.selectedIndex].text
+
+        let num1 = Number(document.getElementById("num1").value)
+
+        let num2 = Number(document.getElementById("num2").value)
+
+        let ansSpan = document.getElementById("ans")
+
+        switch (op) {
+            case '+':
+                ansSpan.innerHTML = num1 + num2
+                break
+            case '-':
+                ansSpan.innerHTML = num1 - num2
+                break
+            case '/':
+                ansSpan.innerHTML = num1 / num2
+                break
+            case '*':
+                ansSpan.innerHTML = num1 * num2
+                break
+            default:
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Not a valid symbol!'
+                }) 
+        }  
+
+    }   
+
+</script>
