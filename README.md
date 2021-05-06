@@ -155,7 +155,7 @@ myConstant = "BYE"; // Not going to work
 console.log(myVariable); // 8  
 console.log(myVariable + 8); // 16  
 console.log(myVariable - 8); // 0  
-console.log(myVariable \* 8); // 64  
+console.log(myVariable * 8); // 64  
 console.log(myVariable / 2); // 4  
 console.log(Math.pow(8, 2)); // 64  
   
