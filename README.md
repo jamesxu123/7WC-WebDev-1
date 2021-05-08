@@ -145,7 +145,7 @@ JavaScript syntax is very similar to that of Java and, by extension, C and C++. 
 
 ```js
 let myVariable = 8;  
-let myOtherVariable = ["Web", "Dev", "Club"];
+let myOtherVariable = ["Web", "Dev", "Workshop"];
 
 let yetAnotherVariable = "Web";  
   
